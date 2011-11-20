@@ -18,7 +18,7 @@ to exploit it accordingly and efficiently.
 
 %package devel
 Summary: Header files, libraries and development documentation for %{name}.
-Group: Development/Libraries
+Group: Development/Other
 Requires: %{name} = %{version}-%{release}
 
 %description devel
@@ -27,7 +27,7 @@ documentation for %{name}. If you like to develop programs using %{name},
 you will need to install %{name}-devel.
 
 %prep
-%setup
+%setup -q
 
 %build
 %configure --disable-static
