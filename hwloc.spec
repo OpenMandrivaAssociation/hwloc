@@ -17,7 +17,7 @@ applications with gathering information about modern computing hardware so as
 to exploit it accordingly and efficiently.
 
 %package devel
-Summary: Header files, libraries and development documentation for %{name}.
+Summary: Header files, libraries and development documentation for %{name}
 Group: Development/Other
 Requires: %{name} = %{version}-%{release}
 
