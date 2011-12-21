@@ -1,11 +1,11 @@
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	1.3
+Version:	1.3.1
 Release:	1
 License:	BSD
 Group:		System/Base 
 URL:		http://www.open-mpi.org/
-Source:		http://www.open-mpi.org/software/hwloc/v1.3/downloads/hwloc-%{version}.tar.bz2
+Source0:	http://www.open-mpi.org/software/hwloc/v1.3/downloads/hwloc-%{version}.tar.bz2
 
 %description
 The Portable Hardware Locality (hwloc) software package provides a portable
@@ -34,8 +34,9 @@ you will need to install %{name}-devel.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
+#find % {buildroot} -name '*.la' -exec rm {} \;
+
 
 %files
 %doc AUTHORS COPYING NEWS README
@@ -62,12 +63,10 @@ rm -rf %{buildroot}
 %{_libdir}/libhwloc.so.*
 
 %files devel
-%defattr(-, root, root, 0755)
 %doc %{_mandir}/man3/HWLOC_*.3*
 %doc %{_mandir}/man3/hwloc_*.3*
 %doc %{_mandir}/man3/hwlocality_*.3*
 %{_includedir}/hwloc/
 %{_includedir}/hwloc.h
 %{_libdir}/libhwloc.so
-%{_libdir}/*.la
 %{_libdir}/pkgconfig/hwloc.pc
