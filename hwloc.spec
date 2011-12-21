@@ -30,7 +30,7 @@ you will need to install %{name}-devel.
 %setup -q
 
 %build
-%configure --disable-static
+%configure
 %make
 
 %install
