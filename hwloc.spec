@@ -1,11 +1,11 @@
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	1.3.1
+Version:	1.4
 Release:	1
 License:	BSD
 Group:		System/Base 
 URL:		http://www.open-mpi.org/
-Source0:	http://www.open-mpi.org/software/hwloc/v1.3/downloads/hwloc-%{version}.tar.bz2
+Source0:	http://www.open-mpi.org/software/hwloc/v1.4/downloads/hwloc-%{version}.tar.bz2
 
 %description
 The Portable Hardware Locality (hwloc) software package provides a portable
@@ -50,12 +50,18 @@ you will need to install %{name}-devel.
 %doc %{_mandir}/man1/hwloc-ps.1*
 %doc %{_mandir}/man1/lstopo.1*
 %doc %{_mandir}/man7/hwloc.7*
+%doc %{_mandir}/man1/hwloc-assembler.1*
+%doc %{_mandir}/man1/hwloc-assembler-remote.1*
+%doc %{_mandir}/man1/hwloc-distances.1*
 %{_bindir}/hwloc-bind
 %{_bindir}/hwloc-calc
 %{_bindir}/hwloc-distrib
 %{_bindir}/hwloc-gather-topology
 %{_bindir}/hwloc-info
 %{_bindir}/hwloc-ls
+%{_bindir}/hwloc-assembler
+%{_bindir}/hwloc-assembler-remote
+%{_bindir}/hwloc-distances
 %{_bindir}/hwloc-mask
 %{_bindir}/hwloc-ps
 %{_bindir}/lstopo
