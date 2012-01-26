@@ -35,7 +35,7 @@ you will need to install %{name}-devel.
 
 %install
 %makeinstall_std
-#find % {buildroot} -name '*.la' -exec rm {} \;
+find %{buildroot} -name '*.la' -exec rm {} \;
 
 
 %files
