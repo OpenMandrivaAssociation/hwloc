@@ -106,3 +106,25 @@ you will need to install %{name}-devel.
 %{_libdir}/libhwloc.so
 %{_libdir}/pkgconfig/hwloc.pc
 
+
+%changelog
+* Tue Mar 06 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.4.1-1
++ Revision: 782404
+- version update  1.4.1
+- la files removed
+
+* Thu Jan 26 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.4-1
++ Revision: 769199
+- version update 1.4
+- disable-static option removed cause it globally removed in 2012 rpm-policy
+
+* Wed Dec 21 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.3.1-1
++ Revision: 744135
+- version update hwloc 1.3.1
+
+* Sun Nov 20 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.3-1
++ Revision: 732049
+- dot removed
+- spec fix in Group section
+- imported package hwloc
+
