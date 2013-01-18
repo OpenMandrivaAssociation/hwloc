@@ -4,7 +4,7 @@
 
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	1.5
+Version:	1.6.1
 Release:	1
 License:	BSD
 Group:		System/Base
@@ -59,7 +59,7 @@ you will need to install %{name}-devel.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
@@ -80,10 +80,12 @@ you will need to install %{name}-devel.
 %doc %{_mandir}/man1/hwloc-assembler.1*
 %doc %{_mandir}/man1/hwloc-assembler-remote.1*
 %doc %{_mandir}/man1/hwloc-distances.1*
+%doc %{_mandir}/man1/hwloc-annotate.1*
 %{_bindir}/hwloc-bind
 %{_bindir}/hwloc-calc
 %{_bindir}/hwloc-distrib
 %{_bindir}/hwloc-gather-topology
+%{_bindir}/hwloc-annotate
 %{_bindir}/hwloc-info
 %{_bindir}/hwloc-ls
 %{_bindir}/hwloc-assembler
