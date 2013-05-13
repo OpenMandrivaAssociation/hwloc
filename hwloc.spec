@@ -1,3 +1,5 @@
+%define url_ver %(echo %{version}|cut -d. -f1,2)
+
 %define major 5
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname %{name} -d
@@ -8,25 +10,25 @@ Version:	1.6.1
 Release:	1
 License:	BSD
 Group:		System/Base
-URL:		http://www.open-mpi.org/
-Source0:	http://www.open-mpi.org/software/hwloc/v1.5/downloads/hwloc-%{version}.tar.bz2
+Url:		http://www.open-mpi.org/
+Source0:	http://www.open-mpi.org/software/hwloc/v%{url_ver}/downloads/hwloc-%{version}.tar.bz2
+
+BuildRequires:	bzip2-devel
 BuildRequires:	numa-devel
-BuildRequires:	pkgconfig(libxml-2.0)
-BuildRequires:	pkgconfig(libpci)
 BuildRequires:	pkgconfig(cairo)
-BuildRequires:	pkgconfig(x11)
+BuildRequires:	pkgconfig(fontconfig)
+BuildRequires:	pkgconfig(freetype2)
+BuildRequires:	pkgconfig(libpng)
+BuildRequires:	pkgconfig(libpci)
+BuildRequires:	pkgconfig(libxml-2.0)
 BuildRequires:	pkgconfig(ncursesw)
-BuildRequires:	zlib-devel
-# Not sure these are really needed for build:
-BuildRequires:	pkgconfig(xdmcp)
+BuildRequires:	pkgconfig(pixman-1)
+BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xau)
 BuildRequires:	pkgconfig(xcb)
+BuildRequires:	pkgconfig(xdmcp)
 BuildRequires:	pkgconfig(xrender)
-BuildRequires:	pkgconfig(freetype2)
-BuildRequires:	pkgconfig(fontconfig)
-BuildRequires:	pkgconfig(libpng)
-BuildRequires:	pkgconfig(pixman-1)
-BuildRequires:	bzip2-devel
+BuildRequires:	pkgconfig(zlib)
 
 %description
 The Portable Hardware Locality (hwloc) software package provides a portable
@@ -107,26 +109,4 @@ you will need to install %{name}-devel.
 %{_includedir}/hwloc.h
 %{_libdir}/libhwloc.so
 %{_libdir}/pkgconfig/hwloc.pc
-
-
-%changelog
-* Tue Mar 06 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.4.1-1
-+ Revision: 782404
-- version update  1.4.1
-- la files removed
-
-* Thu Jan 26 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.4-1
-+ Revision: 769199
-- version update 1.4
-- disable-static option removed cause it globally removed in 2012 rpm-policy
-
-* Wed Dec 21 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.3.1-1
-+ Revision: 744135
-- version update hwloc 1.3.1
-
-* Sun Nov 20 2011 Alexander Khrukin <akhrukin@mandriva.org> 1.3-1
-+ Revision: 732049
-- dot removed
-- spec fix in Group section
-- imported package hwloc
 
