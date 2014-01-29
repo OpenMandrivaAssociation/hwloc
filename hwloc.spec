@@ -42,30 +42,36 @@ to exploit it accordingly and efficiently.
 
 %files
 %doc AUTHORS COPYING NEWS README
+%doc %{_mandir}/man1/hwloc-annotate.1*
+%doc %{_mandir}/man1/hwloc-assembler.1*
+%doc %{_mandir}/man1/hwloc-assembler-remote.1*
 %doc %{_mandir}/man1/hwloc-bind.1*
 %doc %{_mandir}/man1/hwloc-calc.1*
+%doc %{_mandir}/man1/hwloc-compress-dir.1*
+%doc %{_mandir}/man1/hwloc-diff.1*
 %doc %{_mandir}/man1/hwloc-distrib.1*
 %doc %{_mandir}/man1/hwloc-gather-topology.1*
 %doc %{_mandir}/man1/hwloc-info.1*
 %doc %{_mandir}/man1/hwloc-ls.1*
+%doc %{_mandir}/man1/hwloc-patch.1*
 %doc %{_mandir}/man1/hwloc-ps.1*
 %doc %{_mandir}/man1/lstopo.1*
 %doc %{_mandir}/man1/lstopo-no-graphics.1*
 %doc %{_mandir}/man7/hwloc.7*
-%doc %{_mandir}/man1/hwloc-assembler.1*
-%doc %{_mandir}/man1/hwloc-assembler-remote.1*
 %doc %{_mandir}/man1/hwloc-distances.1*
-%doc %{_mandir}/man1/hwloc-annotate.1*
-%{_bindir}/hwloc-bind
-%{_bindir}/hwloc-calc
-%{_bindir}/hwloc-distrib
-%{_bindir}/hwloc-gather-topology
 %{_bindir}/hwloc-annotate
-%{_bindir}/hwloc-info
-%{_bindir}/hwloc-ls
 %{_bindir}/hwloc-assembler
 %{_bindir}/hwloc-assembler-remote
+%{_bindir}/hwloc-bind
+%{_bindir}/hwloc-calc
+%{_bindir}/hwloc-compress-dir
+%{_bindir}/hwloc-diff
 %{_bindir}/hwloc-distances
+%{_bindir}/hwloc-distrib
+%{_bindir}/hwloc-gather-topology
+%{_bindir}/hwloc-info
+%{_bindir}/hwloc-ls
+%{_bindir}/hwloc-patch
 %{_bindir}/hwloc-ps
 %{_bindir}/lstopo
 %{_bindir}/lstopo-no-graphics
