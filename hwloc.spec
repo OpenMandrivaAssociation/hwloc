@@ -6,15 +6,16 @@
 
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	1.7.1
-Release:	5
+Version:	1.8
+Release:	1
 License:	BSD
 Group:		System/Base
 Url:		http://www.open-mpi.org/
 Source0:	http://www.open-mpi.org/software/hwloc/v%{url_ver}/downloads/hwloc-%{version}.tar.bz2
-
 BuildRequires:	bzip2-devel
+%ifnarch %{arm}
 BuildRequires:	numa-devel
+%endif
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(fontconfig)
 BuildRequires:	pkgconfig(freetype2)
@@ -38,34 +39,6 @@ caches, cores and simultaneous multithreading. It also gathers various system
 attributes such as cache and memory information. It primarily aims at helping
 applications with gathering information about modern computing hardware so as
 to exploit it accordingly and efficiently.
-
-%package -n %{libname}
-Summary:	%{name} shared library
-Group:		System/Libraries
-Conflicts:	%{name} < 1.5
-
-%description -n %{libname}
-This package contains shared %{name} library.
-
-%package -n %{devname}
-Summary:	Header files, libraries and development documentation for %{name}
-Group:		Development/Other
-Requires:	%{libname} = %{version}-%{release}
-
-%description -n %{devname}
-This package contains the header files, static libraries and development
-documentation for %{name}. If you like to develop programs using %{name},
-you will need to install %{name}-devel.
-
-%prep
-%setup -q
-
-%build
-%configure2_5x
-%make
-
-%install
-%makeinstall_std
 
 %files
 %doc AUTHORS COPYING NEWS README
@@ -98,8 +71,30 @@ you will need to install %{name}-devel.
 %{_bindir}/lstopo-no-graphics
 %{_datadir}/hwloc/
 
+#----------------------------------------------------------------------------
+
+%package -n %{libname}
+Summary:	%{name} shared library
+Group:		System/Libraries
+Conflicts:	%{name} < 1.5
+
+%description -n %{libname}
+This package contains shared %{name} library.
+
 %files -n %{libname}
 %{_libdir}/libhwloc.so.%{major}*
+
+#----------------------------------------------------------------------------
+
+%package -n %{devname}
+Summary:	Header files, libraries and development documentation for %{name}
+Group:		Development/Other
+Requires:	%{libname} = %{EVRD}
+
+%description -n %{devname}
+This package contains the header files, static libraries and development
+documentation for %{name}. If you like to develop programs using %{name},
+you will need to install %{name}-devel.
 
 %files -n %{devname}
 %doc %{_mandir}/man3/HWLOC_*.3*
@@ -109,4 +104,16 @@ you will need to install %{name}-devel.
 %{_includedir}/hwloc.h
 %{_libdir}/libhwloc.so
 %{_libdir}/pkgconfig/hwloc.pc
+
+#----------------------------------------------------------------------------
+
+%prep
+%setup -q
+
+%build
+%configure2_5x
+%make
+
+%install
+%makeinstall_std
 

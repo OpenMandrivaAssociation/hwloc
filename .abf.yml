@@ -1,5 +1,2 @@
-removed_sources:
-  hwloc-1.5.tar.bz2: b2e60bd40cfc6ca79dde68b19a83e8a4719d6b14
-  hwloc-1.6.1.tar.bz2: 9d02234d6abd5332675957506e4d8144c515e986
 sources:
-  hwloc-1.7.1.tar.bz2: 7bb4e6c68d1c24f881d3f7ddf0682b50622351c8
+  hwloc-1.8.tar.bz2: 548a0d111775bceca9f1388d1d03e86a209ed6a8
