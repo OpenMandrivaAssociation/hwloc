@@ -6,7 +6,7 @@
 
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	1.8
+Version:	1.9
 Release:	1
 License:	BSD
 Group:		System/Base

@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   hwloc-1.8.tar.bz2: 548a0d111775bceca9f1388d1d03e86a209ed6a8
+sources:
+  hwloc-1.9.tar.bz2: 99646446502e0f9952170bf1082be63361d99b6d
