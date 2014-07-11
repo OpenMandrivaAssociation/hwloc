@@ -7,7 +7,7 @@
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
 Version:	1.9
-Release:	2
+Release:	3
 License:	BSD
 Group:		System/Base
 Url:		http://www.open-mpi.org/
