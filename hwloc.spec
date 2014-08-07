@@ -13,7 +13,7 @@ Group:		System/Base
 Url:		http://www.open-mpi.org/
 Source0:	http://www.open-mpi.org/software/hwloc/v%{url_ver}/downloads/hwloc-%{version}.tar.bz2
 BuildRequires:	bzip2-devel
-%ifnarch %{arm}
+%ifnarch %{armx}
 BuildRequires:	numa-devel
 %endif
 BuildRequires:	pkgconfig(cairo)
@@ -117,9 +117,8 @@ you will need to install %{name}-devel.
 %setup -q
 
 %build
-%configure2_5x
+%configure
 %make
 
 %install
 %makeinstall_std
-
