@@ -4,10 +4,12 @@
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname %{name} -d
 
+%define _disable_rebuild_configure 1
+
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	1.9
-Release:	6
+Version:	1.11.1
+Release:	1
 License:	BSD
 Group:		System/Base
 Url:		http://www.open-mpi.org/
@@ -76,6 +78,7 @@ to exploit it accordingly and efficiently.
 %{_bindir}/lstopo
 %{_bindir}/lstopo-no-graphics
 %{_datadir}/hwloc/
+%{_datadir}/applications/lstopo.desktop
 
 #----------------------------------------------------------------------------
 
