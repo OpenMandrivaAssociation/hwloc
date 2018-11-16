@@ -109,6 +109,7 @@ you will need to install %{name}-devel.
 %doc %{_mandir}/man3/HWLOC_*.3*
 %doc %{_mandir}/man3/hwloc_*.3*
 %doc %{_mandir}/man3/hwlocality_*.3*
+%{_datadir}/doc/hwloc/*.pdf
 %{_includedir}/hwloc/
 %{_includedir}/hwloc.h
 %{_libdir}/libhwloc.so
