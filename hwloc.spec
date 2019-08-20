@@ -1,6 +1,6 @@
 %define url_ver %(echo %{version}|cut -d. -f1,2)
 
-%define major 5
+%define major 15
 %define libname %mklibname %{name} %{major}
 %define devname %mklibname %{name} -d
 
@@ -8,8 +8,8 @@
 
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	1.11.1
-Release:	3
+Version:	2.0.4
+Release:	1
 License:	BSD
 Group:		System/Base
 Url:		http://www.open-mpi.org/
@@ -45,8 +45,6 @@ to exploit it accordingly and efficiently.
 %files
 %doc AUTHORS COPYING NEWS README
 %doc %{_mandir}/man1/hwloc-annotate.1*
-%doc %{_mandir}/man1/hwloc-assembler.1*
-%doc %{_mandir}/man1/hwloc-assembler-remote.1*
 %doc %{_mandir}/man1/hwloc-bind.1*
 %doc %{_mandir}/man1/hwloc-calc.1*
 %doc %{_mandir}/man1/hwloc-compress-dir.1*
@@ -60,15 +58,13 @@ to exploit it accordingly and efficiently.
 %doc %{_mandir}/man1/lstopo.1*
 %doc %{_mandir}/man1/lstopo-no-graphics.1*
 %doc %{_mandir}/man7/hwloc.7*
-%doc %{_mandir}/man1/hwloc-distances.1*
+%doc %{_mandir}/man1/hwloc-dump-hwdata.1.*
+%doc %{_mandir}/man1/hwloc-gather-cpuid.1.*
 %{_bindir}/hwloc-annotate
-%{_bindir}/hwloc-assembler
-%{_bindir}/hwloc-assembler-remote
 %{_bindir}/hwloc-bind
 %{_bindir}/hwloc-calc
 %{_bindir}/hwloc-compress-dir
 %{_bindir}/hwloc-diff
-%{_bindir}/hwloc-distances
 %{_bindir}/hwloc-distrib
 %{_bindir}/hwloc-gather-topology
 %{_bindir}/hwloc-info
@@ -77,6 +73,8 @@ to exploit it accordingly and efficiently.
 %{_bindir}/hwloc-ps
 %{_bindir}/lstopo
 %{_bindir}/lstopo-no-graphics
+%{_bindir}/hwloc-gather-cpuid
+%{_sbindir}/hwloc-dump-hwdata
 %{_datadir}/hwloc/
 %{_datadir}/applications/lstopo.desktop
 
