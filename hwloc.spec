@@ -58,8 +58,11 @@ to exploit it accordingly and efficiently.
 %doc %{_mandir}/man1/lstopo.1*
 %doc %{_mandir}/man1/lstopo-no-graphics.1*
 %doc %{_mandir}/man7/hwloc.7*
-%doc %{_mandir}/man1/hwloc-dump-hwdata.1.*
 %doc %{_mandir}/man1/hwloc-gather-cpuid.1.*
+%ifarch %{armx} %{riscv}
+%doc %{_mandir}/man1/hwloc-dump-hwdata.1.*
+%{_sbindir}/hwloc-dump-hwdata
+%endif
 %{_bindir}/hwloc-annotate
 %{_bindir}/hwloc-bind
 %{_bindir}/hwloc-calc
@@ -74,7 +77,6 @@ to exploit it accordingly and efficiently.
 %{_bindir}/lstopo
 %{_bindir}/lstopo-no-graphics
 %{_bindir}/hwloc-gather-cpuid
-%{_sbindir}/hwloc-dump-hwdata
 %{_datadir}/hwloc/
 %{_datadir}/applications/lstopo.desktop
 
