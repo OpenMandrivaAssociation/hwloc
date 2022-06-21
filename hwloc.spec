@@ -8,7 +8,7 @@
 
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	2.0.4
+Version:	2.7.1
 Release:	1
 License:	BSD
 Group:		System/Base
@@ -122,7 +122,7 @@ you will need to install %{name}-devel.
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
