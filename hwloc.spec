@@ -8,7 +8,7 @@
 
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	2.0.4
+Version:	2.7.1
 Release:	1
 License:	BSD
 Group:		System/Base
@@ -44,25 +44,24 @@ to exploit it accordingly and efficiently.
 
 %files
 %doc AUTHORS COPYING NEWS README
-%doc %{_mandir}/man1/hwloc-annotate.1*
-%doc %{_mandir}/man1/hwloc-bind.1*
-%doc %{_mandir}/man1/hwloc-calc.1*
-%doc %{_mandir}/man1/hwloc-compress-dir.1*
-%doc %{_mandir}/man1/hwloc-diff.1*
-%doc %{_mandir}/man1/hwloc-distrib.1*
-%doc %{_mandir}/man1/hwloc-gather-topology.1*
-%doc %{_mandir}/man1/hwloc-info.1*
-%doc %{_mandir}/man1/hwloc-ls.1*
-%doc %{_mandir}/man1/hwloc-patch.1*
-%doc %{_mandir}/man1/hwloc-ps.1*
-%doc %{_mandir}/man1/lstopo.1*
-%doc %{_mandir}/man1/lstopo-no-graphics.1*
-%doc %{_mandir}/man7/hwloc.7*
-%doc %{_mandir}/man1/hwloc-gather-cpuid.1.*
-%ifarch %{armx} %{riscv}
-%doc %{_mandir}/man1/hwloc-dump-hwdata.1.*
-%{_sbindir}/hwloc-dump-hwdata
-%endif
+%doc %{_datadir}/doc/hwloc/dynamic_SVG_example.html
+%{_mandir}/man1/hwloc-annotate.1*
+%{_mandir}/man1/hwloc-bind.1*
+%{_mandir}/man1/hwloc-calc.1*
+%{_mandir}/man1/hwloc-compress-dir.1*
+%{_mandir}/man1/hwloc-diff.1*
+%{_mandir}/man1/hwloc-distrib.1*
+%{_mandir}/man1/hwloc-gather-topology.1*
+%{_mandir}/man1/hwloc-info.1*
+%{_mandir}/man1/hwloc-ls.1*
+%{_mandir}/man1/hwloc-patch.1*
+%{_mandir}/man1/hwloc-ps.1*
+%{_mandir}/man1/lstopo.1*
+%{_mandir}/man1/lstopo-no-graphics.1*
+%{_mandir}/man7/hwloc.7*
+%{_mandir}/man1/hwloc-gather-cpuid.1.*
+%{_mandir}/man1/hwloc-dump-hwdata.1.*
+%{_bindir}/hwloc-dump-hwdata
 %{_bindir}/hwloc-annotate
 %{_bindir}/hwloc-bind
 %{_bindir}/hwloc-calc
@@ -79,6 +78,7 @@ to exploit it accordingly and efficiently.
 %{_bindir}/hwloc-gather-cpuid
 %{_datadir}/hwloc/
 %{_datadir}/applications/lstopo.desktop
+%{_datadir}/bash-completion/completions/hwloc
 
 #----------------------------------------------------------------------------
 
@@ -106,9 +106,9 @@ documentation for %{name}. If you like to develop programs using %{name},
 you will need to install %{name}-devel.
 
 %files -n %{devname}
-%doc %{_mandir}/man3/HWLOC_*.3*
-%doc %{_mandir}/man3/hwloc_*.3*
-%doc %{_mandir}/man3/hwlocality_*.3*
+%{_mandir}/man3/HWLOC_*.3*
+%{_mandir}/man3/hwloc_*.3*
+%{_mandir}/man3/hwlocality_*.3*
 %{_datadir}/doc/hwloc/*.pdf
 %{_includedir}/hwloc/
 %{_includedir}/hwloc.h
@@ -122,7 +122,7 @@ you will need to install %{name}-devel.
 
 %build
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
