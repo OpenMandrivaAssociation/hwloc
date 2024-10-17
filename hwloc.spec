@@ -12,7 +12,7 @@ Version:	2.10.0
 Release:	1
 License:	BSD
 Group:		System/Base
-Url:		http://www.open-mpi.org/
+Url:		https://www.open-mpi.org/
 Source0:	http://www.open-mpi.org/software/hwloc/v%{url_ver}/downloads/hwloc-%{version}.tar.bz2
 BuildRequires:	bzip2-devel
 %ifnarch %{armx} %{riscv}
