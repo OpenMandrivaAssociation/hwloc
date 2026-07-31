@@ -8,8 +8,8 @@
 
 Summary:	Displays the hardware topology in convenient formats
 Name:		hwloc
-Version:	2.12.2
-Release:	2
+Version:	2.14.0
+Release:	1
 License:	BSD
 Group:		System/Base
 Url:		https://www.open-mpi.org/
